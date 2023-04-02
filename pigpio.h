@@ -2598,7 +2598,7 @@ D*/
 
 /*F*/
 int i2cWriteBlockData(
-unsigned handle, unsigned i2cReg, char *buf, unsigned count);
+unsigned handle, unsigned i2cReg, const char *buf, unsigned count);
 /*D
 This writes up to 32 bytes to the specified register of the device
 associated with handle.
@@ -2702,7 +2702,7 @@ D*/
 
 /*F*/
 int i2cWriteI2CBlockData(
-unsigned handle, unsigned i2cReg, char *buf, unsigned count);
+unsigned handle, unsigned i2cReg, const char *buf, unsigned count);
 /*D
 This writes 1 to 32 bytes to the specified register of the device
 associated with handle.
@@ -2743,7 +2743,7 @@ D*/
 
 
 /*F*/
-int i2cWriteDevice(unsigned handle, char *buf, unsigned count);
+int i2cWriteDevice(unsigned handle, const char *buf, unsigned count);
 /*D
 This writes count bytes from buf to the raw device.
 

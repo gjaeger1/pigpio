@@ -3789,7 +3789,7 @@ int i2cReadBlockData(unsigned handle, unsigned reg, char *buf)
 
 
 int i2cWriteBlockData(
-   unsigned handle, unsigned reg, char *buf, unsigned count)
+   unsigned handle, unsigned reg, const char *buf, unsigned count)
 {
    union my_smbus_data data;
 
@@ -3942,7 +3942,7 @@ int i2cReadI2CBlockData(
 
 
 int i2cWriteI2CBlockData(
-   unsigned handle, unsigned reg, char *buf, unsigned count)
+   unsigned handle, unsigned reg, const char *buf, unsigned count)
 {
    union my_smbus_data data;
 
@@ -3988,7 +3988,7 @@ int i2cWriteI2CBlockData(
    return status;
 }
 
-int i2cWriteDevice(unsigned handle, char *buf, unsigned count)
+int i2cWriteDevice(unsigned handle, const char *buf, unsigned count)
 {
    int bytes;
 
